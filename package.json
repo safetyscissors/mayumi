@@ -1,0 +1,31 @@
+{
+  "name": "mayumi",
+  "version": "1.0.0",
+  "description": "english language parser",
+  "main": "main.js",
+  "dependencies": {
+    "request": "^2.62.0",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unsafetyscissors/mayumi.git"
+  },
+  "keywords": [
+    "english",
+    "language",
+    "grammar",
+    "node",
+    "lamp"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unsafetyscissors/mayumi/issues"
+  },
+  "homepage": "https://github.com/unsafetyscissors/mayumi"
+}
