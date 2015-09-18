@@ -1,5 +1,6 @@
 <?php
 	$router = require('../library/router.php');
+	$db = require('../config/dbServerConfig.php');
 
 	function mainTest($res){
 		$res->data='maintest';
