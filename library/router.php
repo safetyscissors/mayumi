@@ -16,7 +16,7 @@
 			Builds the response object.
 		*/
 		public function __construct(){
-			$this->routes = [];
+			$this->routes = array();
 			$this->response = json_decode('{"data":{}, "error":{}, "status":"success"}');
 		}
 
@@ -45,7 +45,7 @@
 	    returns string [method:path]
 	  */
 	  function getUri(){
-	    $uri=explode("/",$_SERVER[REQUEST_URI]);
+	    $uri=explode("/",$_SERVER['REQUEST_URI']);
 
 	    //get rid of extra directory depth
 	    array_shift($uri);
@@ -59,7 +59,7 @@
 	    $uri=$uri[0];
 	    
 	    //get GET params
-	    $params=split("&",$params);
+	    $params=explode("&",$params);
 	    foreach($params as $param){
 	      $param=split("=",$param);
 	      $_GET[$param[0]]=$param[1];

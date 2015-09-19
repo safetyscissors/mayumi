@@ -1,13 +1,7 @@
 <?php
-	if(isset($DB)) return $DB;
+	if(isset($db)) return $db;
 
 	//CHANGE ME. template for git.
-	$DB = new mysqli("host","user","password","database");
-	
-	if($DB->connect_errono){
-		printf("Connection failed: %s\n", $DB->connect_error);
-		exit();
-	}
-
-	return $DB;
+	$db = new mysqli("127.0.0.1","gitfun","Iamai#13","mayumi_dev");
+	return $db;
 ?>
