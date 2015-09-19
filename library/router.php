@@ -35,7 +35,7 @@
 				$this->response->error->message="route '$uri' doesnt exist. sorry.";
 			}
 
-			echo(json_encode($this->response));
+			//echo(json_encode($this->response));
 		}
 
 		/* ********************************* HELPER FUNCTIONS ********************************* */
