@@ -1,16 +1,14 @@
 var serverUtil = require('./client/services/serverUtilities');
 var fs = require('fs');
 
-<<<<<<< HEAD
 serverUtil.send('GET', 'test', function(error, response, body){
 	console.log(error, body);
 })
-=======
+
 var inputSentence = 'the dog eats candy';
 serverUtil.sendSentence(inputSentence, function(error, outputSentence){
 	console.log('error:' + error);
 	console.log(JSON.stringify(outputSentence));
->>>>>>> 8dfb518cd5274acbcc12104f54c736d9d977ba8c
 
 fs.readFile('./testFile', 'utf8', function (error, data) {
   if(error){
