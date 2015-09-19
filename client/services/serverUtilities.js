@@ -32,7 +32,7 @@ exports.sendSentence = function(inputSentance, callback){
 				//console.log(body);
 				
 				xmlParser(body, function(xmlError, jsonData){
-					//console.log(xmlError);
+					console.log(xmlError);
 					outputSentance.push(jsonData['entry_list']['entry']); 
 					return eachCallback();
 				});
