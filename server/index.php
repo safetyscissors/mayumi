@@ -20,9 +20,9 @@
 	$router->route();
 
 
-	$resul=$dbService->query("INSERT INTO words (word, frequency) VALUES('test',2)", array());
-	$resul2=$dbService->query("SELECT * FROM words", array());
-	echo($resul2);
+	//$resul=$dbService->query("INSERT INTO words (word, frequency) VALUES('test',2)", array());
+	//$resul2=$dbService->query("SELECT * FROM words", array());
+	//echo($resul2);
 
 	//cleaning up
 	$dbService->close();
