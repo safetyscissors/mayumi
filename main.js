@@ -20,6 +20,22 @@ function printOutput(partArray) {
 }
 
 
+
+function chunk(wordArr) {
+
+	var chunkArr = [];
+	var len = wordArr.length;
+
+	
+
+}
+
+
+
+
+
+
+
 var testNew = {
 	test:"The Dog",
 	part_speech: "subject"
