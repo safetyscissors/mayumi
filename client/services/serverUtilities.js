@@ -1,6 +1,7 @@
 var request = require('request');
 var async = require('async');
 var xmlParser = require('xmljson').to_json;
+var _ = require('underscore');
 
 console.log('loading server utilities');
 
@@ -22,7 +23,7 @@ exports.send = function(method, uri, callback){
 }
 
 
-exports.sendSentance = function(inputSentance, callback){
+exports.sendSentence = function(inputSentance, callback){
 	var outputSentance = [];
 	async.eachSeries(inputSentance.split(' '), 
 		function(item, eachCallback){
@@ -39,6 +40,25 @@ exports.sendSentance = function(inputSentance, callback){
 		},
 		function(error){
 			//console.log(outputSentance);
+			//outputSentance = exports.cleanSentence(outputSentance);
 			callback(error, outputSentance);
 		});
 };
+
+exports.cleanSentence = function(sentence){
+	var newSentence = [];
+	for(var i=0;i<sentence.length;i++){
+		var dataWord = sentence[i];
+
+_.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; })
+
+		var word = {};
+		word.word = dataWord[0]['ew'];
+		word.fl = _.filter(_.pluck(dataWord, 'fl'), function(afl){return afl});
+		word.cx = _.filter(_.pluck(dataWord, 'cx'), function(acx){return acx});
+
+		newSentence.push(word);
+	}
+	
+	return newSentence;
+}
