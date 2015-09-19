@@ -28,11 +28,11 @@ exports.sendSentance = function(inputSentance, callback){
 		function(item, eachCallback){
 			console.log('reading:'+item);
 			exports.send('GET', 'word?word=' + item, function(error, response, body){
-				console.log(body);
+				//console.log(body);
 				
 				xmlParser(body, function(xmlError, jsonData){
 					//console.log(xmlError);
-					outputSentance.push(JSON.stringify(jsonData)); 
+					outputSentance.push(jsonData['entry_list']['entry']); 
 					return eachCallback();
 				});
 			});
