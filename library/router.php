@@ -27,6 +27,7 @@
 		*/
 		public function route(){
 			$uri = $this->getUri();
+			$this->response->uri=$uri;
 			if(array_key_exists($uri, $this->routes)){
 				$this->routes[$uri]($this->response);
 			}else{
