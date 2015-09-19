@@ -52,12 +52,22 @@ function chunk(wordArr) {
 	}
 
 	while (i < len) {
-		var start = i;
+		var startV = i;
 		if (multSpeech(wordArr[i],"article")) {
+			val chunkText = wordArr[i].text;
 			while (i < len && !multSpeech(wordArr[i].part_speech, "noun") {
-
+				i++;
+				chunkText = chunkText + " " + wordArr[i].text;
 			}
+			var chunkObj = {
+				text:chunkText,
+				part_speech: "",
+				start: startV
+				end: end
+			}
+			chunkArr.push()
 		}
+		i++;
 	}
 
 }
