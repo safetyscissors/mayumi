@@ -10,9 +10,13 @@
 	function thingTest($res){
 		$res->data='thingTest';
 	}
+	function dictionaryThing($res){
+		var_dump(grab_xmp_definition('test'));
+	}
 
 	$router->get('thing', 'thingTest');
 	$router->get('test', 'mainTest');
+	$router->get('', 'dictionaryThing');
 	$router->route();
 
 
