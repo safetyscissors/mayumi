@@ -19,14 +19,41 @@ function printOutput(partArray) {
 	return out;
 }
 
+function multSpeech(objIn, checkPart) {
+	var boolOut = false;
+	var len = objIn.part_speech.length;
+	var count = 0;
 
+	while (count < len && !boolOut) {
+		if (objIn.part_speech[count] == checkPart) {
+			boolOut = true;
+		}
+		count++;
+	}
+
+	return boolOut;
+}
 
 function chunk(wordArr) {
 
 	var chunkArr = [];
 	var len = wordArr.length;
 
-	
+	for ( i = 0; i < len; i++) {
+		var pos = wordArr[i].part_speech;
+		if (pos == "preposition") {
+			var pos2 = wordArr[i+1]
+		}
+	}
+
+	while (i < len) {
+		var start = i;
+		if (multSpeech(wordArr[i],"article")) {
+			while (i < len && !multSpeech(wordArr[i].part_speech, "noun") {
+
+			}
+		}
+	}
 
 }
 
