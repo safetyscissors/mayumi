@@ -11,7 +11,7 @@
 		$res->data='thingTest';
 	}
 	function dictionaryThing($res){
-		echo $res->uri;
+		echo $_GET['word'];
 		//var_dump(grab_xmp_definition('test'));
 	}
 
