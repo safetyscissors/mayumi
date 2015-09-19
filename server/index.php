@@ -11,7 +11,7 @@
 		$res->data='thingTest';
 	}
 	function dictionaryThing($res){
-		var_dump(grab_xmp_definition($_GET['word']));
+		var_dump(grab_xml_definition($_GET['word']));
 	}
 
 	$router->get('thing', 'thingTest');
