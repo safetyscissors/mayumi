@@ -1,7 +1,5 @@
 <?php
 	if(isset($db)) return $db;
-
-	//CHANGE ME. template for git.
-	$db = new mysqli("127.0.0.1","gitfun","Iamai#13","mayumi_dev");
+	$db = new mysqli("localhost", "thenint2_mai","Iamai#13","thenint2_mayumi_dev");
 	return $db;
 ?>
