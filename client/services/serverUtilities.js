@@ -32,15 +32,13 @@ exports.sendSentence = function(inputSentance, callback){
 				//console.log(body);
 				
 				xmlParser(body, function(xmlError, jsonData){
-					console.log(xmlError);
 					outputSentance.push(jsonData['entry_list']['entry']); 
 					return eachCallback();
 				});
 			});
 		},
 		function(error){
-			//console.log(outputSentance);
-			//outputSentance = exports.cleanSentence(outputSentance);
+			outputSentance = exports.cleanSentence(outputSentance);
 			callback(error, outputSentance);
 		});
 };
@@ -49,8 +47,6 @@ exports.cleanSentence = function(sentence){
 	var newSentence = [];
 	for(var i=0;i<sentence.length;i++){
 		var dataWord = sentence[i];
-
-_.filter([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; })
 
 		var word = {};
 		word.word = dataWord[0]['ew'];
