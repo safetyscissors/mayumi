@@ -2,7 +2,7 @@ var request = require('request');
 console.log('loading server utilities');
 
 //TODO require some configs
-serverUrl = 'http://localhost:8888/mayumi/server/';
+serverUrl = 'http://theninthbit.us/mayumi/server/';
 
 
 /*
