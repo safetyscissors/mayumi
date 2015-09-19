@@ -1,10 +1,11 @@
 <?php
 	$router = require('../library/router.php');
 	$dbService = require('./services/dbService.php');
-
+	$dictionary = require('./services/dictionary.php');
 
 	function mainTest($res){
 		$res->data='maintest';
+		var_dump(grab_xml_definition('test'));
 	}
 	function thingTest($res){
 		$res->data='thingTest';
