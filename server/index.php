@@ -11,12 +11,13 @@
 		$res->data='thingTest';
 	}
 	function dictionaryThing($res){
-		var_dump(grab_xmp_definition('test'));
+		echo $res->uri;
+		//var_dump(grab_xmp_definition('test'));
 	}
 
 	$router->get('thing', 'thingTest');
 	$router->get('test', 'mainTest');
-	$router->get('', 'dictionaryThing');
+	$router->get('word', 'dictionaryThing');
 	$router->route();
 
 
