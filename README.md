@@ -1,5 +1,6 @@
 # mayumi
 ### description
+Hello.
 english language processing. Trying on some Chomsky universal grammar.
 
 ### details
@@ -22,4 +23,9 @@ Server is setup. currently at "theninthbit.us/mayumi/server"
 If setting up your own server, 
 - `mayumi/server` directory needs to be accessible to a server.
 - Server path needs to be added to node config. In `mayumi/client/services/serverUtilities.js:line 5`, set your path like `serverUrl = 'http://localhost/mayumi/server/';`
+<<<<<<< HEAD
 - Database config file needs to be created and added to. `mayumi/config/dbServerConfig.php` creates a mysqli object and passes it to the db.
+=======
+- Add npm packages needed with `sudo npm install` from the root directory cli.
+- Run with `node main.js`
+>>>>>>> e5aeabd908d3831adac6572a182b41af3a8d663c
