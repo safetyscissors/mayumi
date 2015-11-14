@@ -23,10 +23,21 @@
   </div>
 
   <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
-        <div id="outputText" class="panel panel-default panel-body speechBubble">
-        </div>
+      <div class="col-lg-2">
+        <div class="visible-lg" style="position:absolute; top:50px;right:0">
+            <img src="client/img/girl.png" width="100px">
+            </div>
       </div>
+      <div class="col-lg-8">
+        <div id="outputText" class="panel panel-default panel-body">
+        </div>
+        <div class="speechBubble visible-lg"></div>
+      </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
   </div>
 </div>
 
