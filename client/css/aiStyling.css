@@ -1,9 +1,7 @@
 .speechBubble{
-
 }
 
-.speechBubble:before
-{
+.speechBubble:before {
     content: ' ';
     position: absolute;
     width: 0;
@@ -15,8 +13,7 @@
     border-color: #DDD transparent transparent #DDD;
 }
 
-.speechBubble:after
-{
+.speechBubble:after{
     content: ' ';
     position: absolute;
     width: 0;
@@ -26,4 +23,67 @@
     top: 100%;
     border: 14px solid;
     border-color: #fff transparent transparent #fff;
+}
+
+.rightSpeechBubble:before{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 30px;
+    margin-top:-21px;
+    top: 100%;
+    border: 15px solid;
+    border-color: #ddd #ddd transparent transparent;
+}
+
+.rightSpeechBubble:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 31px;
+    margin-top:-21px;
+    top: 100%;
+    border: 14px solid;
+    border-color: #fff #fff transparent transparent;
+}
+
+.person{
+    position:absolute; top:40px;
+}
+
+
+.wordList{
+    padding:0;
+    margin:0;
+    list-style-type:none;
+}
+
+.word{
+    float:left;
+    margin:5px;
+}
+
+td {
+    text-align:center;
+    padding:2px;
+}
+
+hr {
+    margin:50px 0;
+    height: 6px;
+    background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+    border: 0;
+}
+
+.statusCircle {
+    float:left;
+    margin-top:4px;
+    margin-right:4px;
+    height: 10px;
+    width: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
