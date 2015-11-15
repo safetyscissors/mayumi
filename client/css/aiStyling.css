@@ -78,7 +78,7 @@ hr {
 }
 
 .statusCircle {
-    float:left;
+    display:inline-block;
     margin-top:4px;
     margin-right:4px;
     height: 10px;
