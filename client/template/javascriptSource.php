@@ -8,7 +8,13 @@
     <script src="client/js/funBackground.js"></script>
 
 
-   <script src="client/js/underscore-min.js"></script>
+    <script src="client/js/underscore-min.js"></script>
 
 
-    <script src="client/js/heuristicEngine.js"></script>
+    <script src="client/js/engine-parsing.js"></script>
+
+
+    <script src="client/js/engine-dictionary.js"></script>
+
+
+    <script src="client/js/engine-heuristic.js"></script>

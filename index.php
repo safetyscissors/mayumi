@@ -126,7 +126,8 @@
          lastChanged=(new Date()).getTime();
 
         $('#outputText').html($('#inputText').html());
-        $('#bot1Output').html(heuristicEngine($('#inputText').html()));
+        heuristicEngine($('#inputText').html(), '#bot1Output');
+        dictionaryEngine($('#inputText').html(), '#bot3Output');
       }
     }, 1000);
   }
