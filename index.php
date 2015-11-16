@@ -15,7 +15,7 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2"><h2>
       <div id="inputText" contenteditable="true" class="panel panel-default panel-body">
-        <b>the car drives fast</b>
+        <b>The car drove to the mall.</b>
       </div>
 <!--        <b>Hello!</b><br>
         This is grammar processing.<br><br>
