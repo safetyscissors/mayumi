@@ -50,6 +50,7 @@ exports.cleanSentence = function(sentence){
 
 		var word = {};
 		word.word = dataWord[0]['ew'];
+		word.pos = i;
 		word.fl = _.filter(_.pluck(dataWord, 'fl'), function(afl){return afl});
 		word.cx = _.filter(_.pluck(dataWord, 'cx'), function(acx){return acx});
 

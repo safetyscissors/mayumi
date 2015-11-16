@@ -35,7 +35,7 @@
 				$this->response->error->message="route '$uri' doesnt exist. sorry.";
 			}
 
-			//echo(json_encode($this->response));
+			echo(json_encode($this->response));
 		}
 
 		/* ********************************* HELPER FUNCTIONS ********************************* */
@@ -48,6 +48,7 @@
 	    $uri=explode("/",$_SERVER['REQUEST_URI']);
 
 	    //get rid of extra directory depth
+	    array_shift($uri);
 	    array_shift($uri);
 	    array_shift($uri);
 	    array_shift($uri);
