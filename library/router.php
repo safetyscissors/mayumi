@@ -51,7 +51,6 @@
 	    array_shift($uri);
 	    array_shift($uri);
 	    array_shift($uri);
-	    array_shift($uri);
 	    $uri=join("/",$uri);
 
 	    //get rid of param string

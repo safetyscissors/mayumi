@@ -3,7 +3,7 @@
   RewriteBase /
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(server.*)$ saturdays/mayumi/server/index.php?/$1 [L]
+  RewriteRule ^(server.*)$ mayumi/server/index.php?/$1 [L]
 
 </IfModule>
 
