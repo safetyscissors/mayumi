@@ -56,7 +56,8 @@
 
 .wordList{
     padding:0;
-    margin:0;
+    margin:4px;;
+    height:4em;
     list-style-type:none;
 }
 

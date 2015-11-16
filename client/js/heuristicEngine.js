@@ -1,8 +1,9 @@
 var heuristicEngine = function(text){
   var req = formatInput(text);
-
   var outputHtml = '';
+//  var outputHtml = '<ul>';
   _.each(req.sentences, function(sentence){
+    analyze(sentence);
     outputHtml+= formatOutput(sentence.wordList);
   });
 
@@ -47,6 +48,35 @@ var formatInput = function(inputBlob){
   return req;
 };
 
+var analyze = function(sentence){
+  dictionaryFilter(sentence);
+  naiveNoun(sentence);
+  console.log(sentence);
+};
+
+var dictionaryFilter = function(sentence){
+  var articles = ('a,the,an').split(',');
+  var prepositions = ('aboard,about,above,across,after,against,along,amid,among,anti,around,as,at,before,behind,below,beneath,beside,besides,between,beyond,but,by,concerning,considering,despite,down,during,except,excepting,excluding,following,for,from,in,inside,into,like,minus,near,of,off,on,onto,opposite,outside,over,past,per,plus,regarding,round,save,since,than,through,to,toward,towards,under,underneath,unlike,until,up,upon,versus,via,with,within,without').split(',');
+
+  _.each(sentence.wordList, function(word){
+    if(articles.indexOf(word.text) >=0 ){
+      word.pos = 'a';
+      word.confidence = .9;
+    }
+
+    if(prepositions.indexOf(word.text) >=0 ){
+      word.pos = 'p';
+      word.confidence = .9;
+    }
+  })
+
+};
+
+var naiveNoun = function(sentence){
+  //noun follows an artical or preposition
+
+}
+
 
 //word constructor
 var Word = function(text, position, sentence){
@@ -64,7 +94,7 @@ var Word = function(text, position, sentence){
 
 //data format [{text:'word', confidence:100, pos:'n'}]
 var formatOutput = function(data){
-  var output = ['<p><ul class="wordList">'];
+  var output = ['<ul class="wordList">'];
 
   _.each(data, function(word){
     output.push('<li class="word">', '<table>');
@@ -72,7 +102,7 @@ var formatOutput = function(data){
     output.push('<tr><td>', word.text,'</td></tr>', '</table></li>');
   });
 
-  output.push('</ul></p>');
+  output.push('</ul>');
   return output.join('');
 };
 

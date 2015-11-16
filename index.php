@@ -15,10 +15,13 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2"><h2>
       <div id="inputText" contenteditable="true" class="panel panel-default panel-body">
-        <b>Hello!</b><br>
+        <b>the car drives fast</b>
+      </div>
+<!--        <b>Hello!</b><br>
         This is grammar processing.<br><br>
         Try me!
-      </div>
+</div>
+-->
     </h2></div>
   </div>
 
