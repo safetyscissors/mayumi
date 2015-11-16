@@ -43,7 +43,6 @@ var dictionary_analyze = function(inputSentence, div){
 
       //get all words
       var matchingWords = _.where(inputSentence.wordList, {text:serverWord});
-      var matchingWordIndexes=[];
       _.each(matchingWords, function(searchedWord){
         var originalPos = searchedWord.position;
         inputSentence.wordList[originalPos].confidence = serverConfidence;
